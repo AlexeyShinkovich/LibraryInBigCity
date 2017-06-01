@@ -8,12 +8,12 @@ import java.util.TreeSet;
 import by.htp.entitypublication.PrintedPublication;
 
 public class ScientificLibrary extends Library implements Comparable<Library> {
+	
+	private Set<PrintedPublication> scientificWorks = new HashSet<PrintedPublication>();
 
 	public ScientificLibrary(String address, String name) {
 		super(LibraryType.SCIENTIFIC, address, name);
 	}
-
-	private Set<PrintedPublication> scientificWorks = new HashSet<PrintedPublication>();
 
 	public void addBook(PrintedPublication book) {
 		scientificWorks.add(book);

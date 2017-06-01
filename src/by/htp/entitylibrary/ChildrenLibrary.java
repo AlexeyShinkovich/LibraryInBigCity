@@ -9,12 +9,14 @@ import java.util.TreeSet;
 import by.htp.entitypublication.PrintedPublication;
 
 public class ChildrenLibrary extends Library {
-
+	
+	private List<PrintedPublication> childrenBook = new LinkedList<PrintedPublication>();
+	
 	public ChildrenLibrary(String address, String name) {
 		super(LibraryType.CHILDREN, address, name);
 	}
 
-	private List<PrintedPublication> childrenBook = new LinkedList<PrintedPublication>();
+
 
 	public void addBook(PrintedPublication book) {
 		childrenBook.add(book);

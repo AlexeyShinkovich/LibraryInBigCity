@@ -10,12 +10,12 @@ import java.util.Map.Entry;
 import by.htp.entitypublication.PrintedPublication;
 
 public class CityLibrary extends Library implements Comparable<Library> {
+	
+	private Map<PrintedPublication, Integer> publications = new HashMap<PrintedPublication, Integer>();
 
 	public CityLibrary(String address, String name) {
 		super(LibraryType.CITY, address, name);
 	}
-
-	private Map<PrintedPublication, Integer> publications = new HashMap<PrintedPublication, Integer>();
 
 	@Override
 	public void addBook(PrintedPublication book) {
